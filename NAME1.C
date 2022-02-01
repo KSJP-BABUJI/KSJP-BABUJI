@@ -1,0 +1,33 @@
+/* C program to perform binary search in an array */
+#include<stdio.h>
+void main()
+{
+ int a[50],i,n,s,f,l,m,flg=0;
+ clrscr();
+ printf("How many numbers ");
+ scanf("%d",&n);
+ printf("Enter the numbers in ascending order\n");
+ for(i=0;i<n;i++)
+ scanf("%d",&a[i]);
+ printf("Enter the search number ");
+ scanf("%d",&s);
+ f=0;
+ l=n-1;
+ while(f<=l)
+ {
+   m=(f+l)/2;
+   if(a[m]==s)
+   {
+     printf("%d found in %d location",s,m);
+     flg=1;
+     break;
+   }
+   else if(a[m]>s)
+    l=m-1;
+   else
+    f=m+1;
+ }
+ if(flg==0)
+   printf("Unsuccessful Search %d NOT found",s);
+ getch();
+}
