@@ -1,0 +1,15 @@
+/* Write a program to print given string is palindrome or not. */
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char x[100],y[100];
+    puts("Enter a string ");
+    gets(x);
+    strcpy(y,x);
+    strrev(x);
+    if(strcmp(x,y))
+      printf("%s is NOT palindrome",y);
+    else
+      printf("%s is palindrome",y);
+}
