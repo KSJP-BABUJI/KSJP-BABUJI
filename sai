@@ -1,0 +1,17 @@
+/* Toggle the given string */
+#include<stdio.h>
+void main()
+{
+ int i;
+ char x[100];
+ puts("Enter a string ");
+ gets(x);
+ for(i=0 ; x[i]!='\0' ; i++)
+ {
+   if(x[i]>=65 && x[i]<=90)
+     x[i]=x[i]+32;
+   else if(x[i]>=97 && x[i]<=122)
+     x[i]=x[i]-32;
+ }
+ printf("\nOutput : %s",x);
+}
