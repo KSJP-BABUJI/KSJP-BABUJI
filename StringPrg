@@ -1,0 +1,17 @@
+/* String Program */
+#include <string.h>
+#include <stdio.h>
+int main() 
+{
+  char str[50];
+  int i;
+  printf("Enter a string : ");
+  scanf("%s",str);
+  for(i=0;i<strlen(str)-1;i++)
+  {
+    str[i]=str[i+1];
+  }
+  str[i]=(str[i])+1;
+  printf("Output : %s",str);
+  return 0;
+}
