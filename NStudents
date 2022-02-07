@@ -1,0 +1,43 @@
+/* Write C program to calculate n- students result using structures*/
+#include <stdio.h>
+struct student
+{
+    char name[20],course[20];
+    int rno,s1,s2,s3,s4,s5;
+}s[100];
+int main() 
+{
+  int tot,per,i,n;
+  printf("How many students\n");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+  printf("\nEnter Details of Student : %d",i+1);
+  printf("\nEnter student roll number, name and course\n");
+  scanf("%d%s%s",&s[i].rno,s[i].name,s[i].course);
+  printf("Also enter marks obtained in all the five subjects\n");
+  scanf("%d%d%d%d%d",&s[i].s1,&s[i].s2,&s[i].s3,&s[i].s4,&s[i].s5);
+  }
+  for(i=0;i<n;i++)
+  {
+  printf("\nDetails of Student : %d",i+1);
+  printf("\n---------------------------");
+  tot=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
+  per=tot/5;
+  printf("\nRoll Number = %d",s[i].rno);
+  printf("\nStudent Name = %s",s[i].name);
+  printf("\nCourse = %s",s[i].course);
+  printf("\nSubject-1 Marks = %d",s[i].s1);
+  printf("\nSubject-2 Marks = %d",s[i].s2);
+  printf("\nSubject-3 Marks = %d",s[i].s3);
+  printf("\nSubject-4 Marks = %d",s[i].s4);
+  printf("\nSubject-5 Marks = %d",s[i].s5);
+  printf("\nTotal Marks = %d",tot);
+  printf("\nPercentage of Marks = %d",per);
+  if(s[i].s1<35 || s[i].s2<35 || s[i].s3<35 || s[i].s4<35 || s[i].s5<35)
+  printf("\nResult : Fail");
+  else
+  printf("\nResult : Pass");
+  }
+  return 0;
+}
