@@ -1,0 +1,14 @@
+/* Write a program to print 10 to 1 using recursive function.*/
+#include <stdio.h>
+void recfun(int n)
+{
+    if(n==0)
+      return;
+    printf("%d  ",n--)  ;
+    recfun(n);
+}
+int main()
+{
+  recfun(10);
+  return 0; 
+}
