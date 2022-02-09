@@ -1,0 +1,15 @@
+/* A program to perform arithmetic operations using pointers */ 
+#include<stdio.h>
+int main()
+{
+     int  a, b, *p,*q;
+     printf("Enter two numbers\n");
+     scanf("%d%d" , &a , &b);
+     p=&a; q=&b;
+     printf("\nSum = %d", *p+*q);
+     printf("\nDifference = %d", *p-*q);
+     printf("\nProduct = %d", *p**q);
+     printf("\nQuotient = %d", *p/(*q));
+     printf("\nRemainder = %d", *p%*q);
+     return 0;
+}
